@@ -1,5 +1,7 @@
 # Shortcutter
 
+[![Build Status](https://travis-ci.org/kiwi0fruit/shortcutter.svg?branch=master)](https://travis-ci.org/kiwi0fruit/shortcutter)
+
 Shortcutter is a cross platform API for creating shortcuts for python applications meant to be used in setup.py script or as a command line application (fork of the Shortcut).
 
 Shortcutter creates shortcucts that activate python environment prior launching the app. It supports virtual environments, Anaconda/Miniconda, conda environments, `sudo pip install`, `pip install --user`. Shortcutter will do its best to find your app, searching for the usual suspects in the usual places (i.e. those in the PATH), or you can give it a full path.
