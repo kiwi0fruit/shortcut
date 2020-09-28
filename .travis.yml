@@ -1,5 +1,5 @@
 # Only build PRs or tags
-if: (type = pull_request) OR (tag IS present)
+# if: (type = pull_request) OR (tag IS present)
 
 os:
   - windows
@@ -55,8 +55,8 @@ script:
     elif [ "$TRAVIS_OS_NAME" = 'osx' ]; then
         echo osx
     else
-        sudo mkdir -p ~/Desktop
-        sudo mkdir -p ~/.local/share/applications
+        mkdir -p ~/Desktop
+        mkdir -p ~/.local/share/applications
     fi
   - shortcutter --help
   - shortcutter -t
