@@ -1,5 +1,5 @@
 # Only build PRs or tags
-if: (type = pull_request) OR (tag IS present)
+# if: (type = pull_request) OR (tag IS present)
 
 os:
   - windows
@@ -17,7 +17,6 @@ git:
   submodules: false
 
 # Install packages
-# sudo apt-get install gnome-session gnome-terminal
 install:
   - _py_ver="3.8"
   - |
@@ -31,7 +30,6 @@ install:
         export PATH="$HOME/miniconda/bin:$PATH"
     else
         sudo apt-get update
-        sudo apt-get install ubuntu-gnome-desktop 
         wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
         bash miniconda.sh -b -p $HOME/miniconda
         export PATH="$HOME/miniconda/bin:$PATH"
@@ -51,6 +49,15 @@ install:
 
 # Run test
 script:
-  - "shortcutter --help"
-  - "shortcutter -t"
-  - "shortcutter python"
+  - |
+    if [ "$TRAVIS_OS_NAME" = 'windows' ]; then
+        echo windows
+    elif [ "$TRAVIS_OS_NAME" = 'osx' ]; then
+        echo osx
+    else
+        sudo mkdir -p ~/Desktop
+        sudo mkdir -p ~/.local/share/applications
+    fi
+  - shortcutter --help
+  - shortcutter -t
+  - shortcutter python
