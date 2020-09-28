@@ -8,7 +8,6 @@ ACTIVATE = """#!/bin/bash
 export PYTHONNOUSERSITE=1
 source "{activate}"
 "{executable}" "$@"
-"{bin}/conda" deactivate
 """
 
 ACTIVATE_PROMPT = """#!/bin/bash
