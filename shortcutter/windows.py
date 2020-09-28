@@ -30,7 +30,7 @@ ACTIVATE = r"""@echo off
 set PYTHONNOUSERSITE=1
 call "{activate}"
 {call}"{executable}" %*
-{bin}\conda.exe deactivate
+"{bin}\conda.exe" deactivate
 """
 
 ACTIVATE_PROMPT = """@echo off
