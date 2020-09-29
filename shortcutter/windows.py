@@ -38,7 +38,7 @@ set PYTHONNOUSERSITE=1
 call "{activate}"
 set "u=chcp 65001 && set PYTHONIOENCODING=utf-8 && set PYTHONUTF8=1"
 set "a=chcp 1252 && set PYTHONIOENCODING=&&set PYTHONUTF8="
-set "b=set LANG=C.UTF-8 && set PYTHONIOENCODING=utf-8 && "%PROGRAMFILES%\Git\git-bash.exe""
+set "b=set LANG=C.UTF-8 && set PYTHONIOENCODING=utf-8 && set PYTHONUTF8=1 && "%PROGRAMFILES%\Git\git-bash.exe""
 cd /d %USERPROFILE%
 cmd /k
 """
