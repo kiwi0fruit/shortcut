@@ -11,7 +11,7 @@ source "{activate}"
 """
 
 ACTIVATE_PROMPT = """#!/bin/bash
-bash --rcfile <(echo 'export PATH="{bin}:$PATH"; export PYTHONNOUSERSITE=1; source "{activate}"; cd $HOME')
+bash --rcfile <(echo 'export PYTHONNOUSERSITE=1; source "{activate}"; cd $HOME')
 """
 
 
