@@ -7,7 +7,7 @@ Shortcutter is a cross platform API for creating shortcuts for python applicatio
 Shortcutter creates shortcucts that activate python environment prior launching the app (activation can be disabled if needed). It supports virtual environments, Anaconda/Miniconda, conda environments, `sudo pip install`, `pip install --user`. Shortcutter will do its best to find your app, searching for the usual suspects in the usual places (i.e. those in the PATH), or you can give it a full path.
 
 _**Shortcutter is intended to be used for click/drag'n'drop shortcuts only. Hence do not call/source shortcutter wrapper scripts. If you need executable wrappers from activated environments see [exec-wrappers](https://github.com/gqmelo/exec-wrappers).**_  
-**But do not call/source them either - use** `"%COMSPEC%" /c "<...>\path\to\execwrapper.bat"` (`call path-cmd.bat execwrapper` **see [this](https://github.com/kiwi0fruit/shortcutter/blob/master/path-cmd.bat)) on Windows and**_`"./path/to/execwrapper"` **on Unix**.
+But do not call/source them either - use `"%COMSPEC%" /c "<...>\path\to\execwrapper.bat"` (`call path-cmd.bat execwrapper` if it's in the PATH; see [this](https://github.com/kiwi0fruit/shortcutter/blob/master/path-cmd.bat)) on Windows and`"./path/to/execwrapper"` on Unix (`execwrapper` if it's in the PATH).
 
 Additioanlly special command/method can create shortcut to the terminal at activated environment (plus terminal shortcut at conda root). In case of Windows special env vars `%u%` and `%a%` defined that switch encodings and `%b%` var that sets UTF-8 encoding and starts Bash.
 
