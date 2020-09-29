@@ -9,7 +9,7 @@ from os import path as p
 try:
     import win32com
 except ImportError as e:
-    if "DLL load failed:" in str(e):
+    if "DLL" in str(e):
         path = p.join(p.split(sys.executable)[0], "Lib", "site-packages", "pywin32_system32")
         os.environ["PATH"] = os.environ["PATH"] + ";" + path
         try:
